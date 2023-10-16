@@ -24,6 +24,7 @@ class MainPage extends StatelessWidget {
             tablet: NavBarTablet(),
             mobile: NavBarTablet(),
           )),
+      drawer: !ResponsiveWidget.isDesktop(context) ? const MobileDrawer() : null,
       body: const Placeholder(),
     );
   }

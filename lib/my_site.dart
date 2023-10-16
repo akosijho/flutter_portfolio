@@ -7,6 +7,7 @@ import 'package:my_portfolio/core/providers/scroll_provider.dart';
 import 'package:my_portfolio/core/theme/app_themes.dart';
 import 'package:my_portfolio/core/theme/cubit/theme_cubit.dart';
 import 'package:provider/provider.dart';
+import 'package:sizer/sizer.dart';
 
 class MySite extends StatelessWidget {
   const MySite({super.key});
@@ -25,11 +26,13 @@ class MySite extends StatelessWidget {
         ],
         child: BlocBuilder<ThemeCubit, ThemeState>(
           builder: (context, state) {
-            return MaterialApp(
-              title: 'Jhobert Panerio - Flutter Developer',
-              theme: AppTheme.themeData(state.isDarkThemeOn, context),
-              initialRoute: "/",
-              routes: {"/": (context) => const NoChecking()},
+            return Sizer(
+              builder: (context, orientation, deviceType) => MaterialApp(
+                title: 'Jhobert Panerio - Flutter Developer',
+                theme: AppTheme.themeData(state.isDarkThemeOn, context),
+                initialRoute: "/",
+                routes: {"/": (context) => const NoChecking()},
+              ),
             );
           },
         ),

@@ -26,6 +26,7 @@ class MySite extends StatelessWidget {
         child: BlocBuilder<ThemeCubit, ThemeState>(
           builder: (context, state) {
             return MaterialApp(
+              debugShowCheckedModeBanner: false,
               title: 'Jhobert Panerio - Flutter Developer',
               theme: AppTheme.themeData(state.isDarkThemeOn, context),
               initialRoute: "/",

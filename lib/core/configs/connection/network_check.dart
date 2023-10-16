@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:my_portfolio/app/sections/main/main_page.dart';
 import 'package:my_portfolio/core/configs/connection/bloc/connected_bloc.dart';
 
 class NoChecking extends StatelessWidget {
@@ -9,26 +10,13 @@ class NoChecking extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<ConnectedBloc, ConnectedState>(
       listener: (context, state) {
-        // if (state is ConnectedSucessState) {
-        //   ScaffoldMessenger.of(context).showSnackBar(
-        //       const SnackBar(content: Text('Internet Connected')));
-        // } else if (state is ConnectedFailureState) {
-        //   ScaffoldMessenger.of(context)
-        //       .showSnackBar(const SnackBar(content: Text('Internet Lost')));
-        // }
       },
       builder: (context, state) {
         if (state is ConnectedSucessState) {
-          return const Placeholder();
-          // return const MainScreen();
+          return const MainPage();
         }
-        // else if (state is ConnectedFailureState) {
-        //   return const NoConnectionErorr();
-        // }
         else {
-          // return Container();
-          // return const NoConnectionErorr();
-          return const Placeholder();
+          return const MainPage();
         }
       },
     );

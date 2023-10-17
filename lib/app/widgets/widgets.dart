@@ -5,3 +5,4 @@ export 'desktop_cc_button.dart';
 export 'mobile_cc_button.dart';
 export 'tab_cc_button.dart';
 export 'back_to_top_arrow.dart';
+export 'custom_outline.dart';

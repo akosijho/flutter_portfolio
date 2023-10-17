@@ -83,6 +83,7 @@ class MainPage extends StatelessWidget {
                   alignment: Alignment.topCenter,
                 ),
               ),
+            const Body()
           ],
         ),
         floatingActionButton: const BackToTopArrow(),

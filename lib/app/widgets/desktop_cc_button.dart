@@ -23,14 +23,14 @@ class _DesktopCCButtonState extends State<DesktopCCButton> {
       children: [
         if (!isHover)
           Container(
-            height: 56,
+            height: 64,
             width: 250,
             decoration: BoxDecoration(
                 border: Border.all(color: theme.textColor, width: 3), borderRadius: BorderRadius.circular(6)),
           ),
         AnimatedContainer(
           duration: const Duration(milliseconds: 200),
-          height: 56,
+          height: 64,
           width: _animatedWidth,
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(6), gradient: pinkPurple),
         ),
@@ -46,9 +46,10 @@ class _DesktopCCButtonState extends State<DesktopCCButton> {
             widget.onTap();
           },
           child: SizedBox(
-            height: 65,
+            height: 64,
             width: 250,
-            child: Center(
+            child: Align(
+              alignment: Alignment.center,
               child: Text(
                 widget.text.toUpperCase(),
                 style: TextStyle(color: isHover ? whiteColor : theme.textColor, fontSize: 18),

@@ -36,7 +36,7 @@ const String whatsapp = 'https://api.whatsapp.com/send?phone=94741325674';
 
 String hellotag = '''Hi there, Welcome to My Space  ''';
 
-String yourname = "I'm Sudesh Bandara,";
+String yourname = "I'm Jhobert Panerio,";
 // String hometitle2 = "A Mobile Application\nDeveloper";
 
 String animationtxt1 = " Mobile Application Developer";

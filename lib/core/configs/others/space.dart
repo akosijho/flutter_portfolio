@@ -5,7 +5,7 @@ class Space {
 
   static Widget? x(double no) => SizedBox(width: no);
 
-  static Widget? y(double no) => SizedBox(width: no);
+  static Widget? y(double no) => SizedBox(height: no);
   static Widget? xl;
   static Widget? xm;
 
